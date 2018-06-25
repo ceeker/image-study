@@ -23,3 +23,13 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+.idea/
+image-study.iml
+src/test/
+target/classes/card.jpg
+target/classes/imgs/
+target/classes/lib/opencv/x64/
+target/classes/lib/opencv/x86/
+target/classes/log4j.properties
+target/classes/tessdata/
+target/generated-sources/
