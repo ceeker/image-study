@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zxl.app</groupId>
+    <artifactId>image-study</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <description>图像处理相关,如ocr、识别等等</description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>opencv</groupId>
+            <artifactId>opencv-java</artifactId>
+            <version>3.4.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/opencv/opencv-341.jar</systemPath>
+        </dependency>
+        <!--A Java JNA wrapper for Tesseract OCR API;https://github.com/nguyenq/tess4j-->
+        <dependency>
+            <groupId>net.sourceforge.tess4j</groupId>
+            <artifactId>tess4j</artifactId>
+            <version>4.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+    </dependencies>
+</project>
