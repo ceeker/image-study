@@ -13,15 +13,15 @@ import java.io.File;
  */
 public class TesseractExample {
     public static void main( String[] args ) {
-        System.setProperty("TESSDATA_PREFIX", "E:\\study\\java_study\\opencv_study\\target\\classes\\");
+//        System.setProperty("TESSDATA_PREFIX", "E:\\study\\java_study\\image_study\\target\\classes\\");
 
-        File file = new File("E:\\study\\java_study\\opencv_study\\target\\classes\\imgs\\card.jpg");
+        File file = new File("E:\\study\\java_study\\image_study\\src\\main\\java\\com\\ceeker\\app\\image\\ocr\\card.jpg");
         ITesseract instance = new Tesseract();
         try {
             //设置训练库的位置
-            instance.setDatapath("E:\\study\\java_study\\opencv_study\\target\\classes\\tessdata\\");
+            instance.setDatapath("E:\\study\\java_study\\image_study\\src\\main\\java\\com\\ceeker\\app\\image\\ocr\\tessdata");
             //设置识别语言
-            instance.setLanguage("eng");
+//            instance.setLanguage("eng");
             String result = instance.doOCR(file);
             System.out.println(result);
         } catch (TesseractException e) {
