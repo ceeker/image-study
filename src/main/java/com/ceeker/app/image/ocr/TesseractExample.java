@@ -15,7 +15,7 @@ public class TesseractExample {
     public static void main( String[] args ) {
 //        System.setProperty("TESSDATA_PREFIX", "E:\\study\\java_study\\image_study\\target\\classes\\");
 
-        File file = new File("E:\\study\\java_study\\image_study\\src\\main\\java\\com\\ceeker\\app\\image\\ocr\\1.png");
+        File file = new File("E:\\study\\java_study\\image_study\\src\\main\\java\\com\\ceeker\\app\\image\\ocr\\4.png");
         ITesseract instance = new Tesseract();
         try {
             //设置训练库的位置
