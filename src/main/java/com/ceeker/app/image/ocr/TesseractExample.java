@@ -22,7 +22,7 @@ public class TesseractExample {
         String tessdata = Thread.currentThread().getContextClassLoader().getResource("tessdata").getFile();
         String absolutePath = new File(tessdata).getAbsolutePath();
         tessdata = tessdata.substring(1);
-        String pic = Thread.currentThread().getContextClassLoader().getResource("imgs/1.png").getFile();
+        String pic = Thread.currentThread().getContextClassLoader().getResource("imgs/3.png").getFile();
         File imgFile = new File(pic);
         ITesseract instance = new Tesseract();
         System.out.println(String.format("tessdata path=%s,imgFile=%s", tessdata, imgFile));
@@ -30,8 +30,7 @@ public class TesseractExample {
             //设置训练库的位置
             instance.setDatapath(absolutePath);
             //设置识别语言
-            instance.setLanguage("eng");
-//            instance.setLanguage("chi_sim");
+            instance.setLanguage("chi_sim");
             String result = instance.doOCR(imgFile);
             System.out.println("ocr result:" + result);
         } catch (TesseractException e) {
