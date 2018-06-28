@@ -5,6 +5,7 @@ import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 
 import java.io.File;
+import java.net.URISyntaxException;
 
 /**
  * @author vectorzhang
@@ -16,19 +17,23 @@ import java.io.File;
  */
 public class TesseractExample {
 
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws URISyntaxException {
 //        System.setProperty("TESSDATA_PREFIX", "E:\\study\\java_study\\image_study\\target\\classes\\");
-
-        File file = new File("E:\\study\\java_study\\image_study\\src\\main\\java\\com\\ceeker\\app\\image\\ocr\\5.png");
+        String tessdata = Thread.currentThread().getContextClassLoader().getResource("tessdata").getFile();
+        String absolutePath = new File(tessdata).getAbsolutePath();
+        tessdata = tessdata.substring(1);
+        String pic = Thread.currentThread().getContextClassLoader().getResource("imgs/1.png").getFile();
+        File imgFile = new File(pic);
         ITesseract instance = new Tesseract();
+        System.out.println(String.format("tessdata path=%s,imgFile=%s", tessdata, imgFile));
         try {
             //设置训练库的位置
-            instance.setDatapath("E:\\study\\java_study\\image_study\\src\\main\\java\\com\\ceeker\\app\\image\\ocr\\tessdata");
+            instance.setDatapath(absolutePath);
             //设置识别语言
-//            instance.setLanguage("eng");
-            instance.setLanguage("chi_sim");
-            String result = instance.doOCR(file);
-            System.out.println(result);
+            instance.setLanguage("eng");
+//            instance.setLanguage("chi_sim");
+            String result = instance.doOCR(imgFile);
+            System.out.println("ocr result:" + result);
         } catch (TesseractException e) {
             e.printStackTrace();
         }
