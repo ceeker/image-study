@@ -8,7 +8,10 @@ import java.io.File;
 
 /**
  * @author vectorzhang
- * @desc 中文识别很差
+ * @desc 中文识别很差,
+ * 可以用jTessBoxEditor进行训练，从而提高识别率
+ * 参考：https://www.cnblogs.com/wzben/p/5930538.html
+ * https://www.cnblogs.com/cnlian/p/5765871.html
  * @date 2018/6/25 17:09
  */
 public class TesseractExample {
