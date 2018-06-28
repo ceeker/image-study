@@ -15,6 +15,7 @@ import java.io.File;
  * @date 2018/6/25 17:09
  */
 public class TesseractExample {
+
     public static void main( String[] args ) {
 //        System.setProperty("TESSDATA_PREFIX", "E:\\study\\java_study\\image_study\\target\\classes\\");
 
